@@ -1,63 +1,60 @@
-# Code for Comparing Multiple Registrations
+# AutomateWithAppsScript
 
-This folder contains Google Apps Script utilities for analyzing and comparing event registration data across multiple Google Sheets. These scripts help event organizers quickly identify common participants, overlapping registrations, and other useful insights from their registration spreadsheets.
-
----
-
-## Scripts Included
-
-### 1. `eventRegistrationComparator.js`
-- **Purpose:**  
-  Compares email registrations across multiple event sheets and finds the number of common participants between each pair of events.
-- **Output:**  
-  Creates/updates a sheet named `EventPairs` with a table showing each event pair and the count of common registrations.
-
-### 2. `eventRegistrationComparator(mail ids as output).js`
-- **Purpose:**  
-  Compares email registrations across multiple event sheets and lists the actual email addresses common to each pair of events.
-- **Output:**  
-  Creates/updates a sheet named `EventPairs` with a table showing each event pair and the list of common email addresses.
-
-### 3. `Finding multiple registration from same mail id.js`
-- **Purpose:**  
-  Identifies email addresses that have registered for more than one event.
-- **Output:**  
-  Creates/updates a sheet named `MultipleRegistrations` with a table listing each email and the events they registered for.
+A comprehensive collection of Google Apps Script utilities for automating event management workflows, including registration analysis, ticket generation, and participant management.
 
 ---
 
-## How to Use
+## Repository Structure
 
-1. **Copy the desired script(s) into the Apps Script editor** attached to your Google Spreadsheet containing the event registration sheets.
-2. **Edit the `sheetNames` array** at the top of each script to include the exact names of your event sheets:
-   ```javascript
-   var sheetNames = ["Event1", "Event2", "Event3"];
-   ```
-3. **Run the main function** in each script from the Apps Script editor:
-   - For comparators: `compareEventRegistrations()`
-   - For multiple registration finder: `extractMultipleRegistrations()`
-4. **Check the output sheets** (`EventPairs` or `MultipleRegistrations`) in your spreadsheet for results.
+This repository contains multiple folders, each focused on specific automation tasks:
+
+### 📊 `Code for Comparing multiple registrations/`
+Utilities for analyzing and comparing event registration data across multiple Google Sheets.
+
+**Key Features:**
+- Compare email registrations across multiple event sheets
+- Find common participants between events
+- Identify multiple registrations from the same email
+- Generate detailed reports and analytics
+
+### 🎫 `Complete ticket automation/`
+Comprehensive ticket automation system with QR code generation and team ID management.
+
+**Key Features:**
+- QR code generation for event tickets
+- Team ID generation based on various criteria (game selection, team size, birthdate)
+- Automated ticket sending via email
+- HTML form integration for ticket processing
 
 ---
 
-## Notes
+## Getting Started
 
-- All scripts assume that email addresses are in **column B** of each event sheet, with the first row as a header.
-- If the output sheet (`EventPairs` or `MultipleRegistrations`) does not exist, the script will create it automatically.
-- Existing data in the output sheet will be cleared each time the script runs.
+Each folder contains its own detailed README with specific instructions for:
+- Setup and configuration
+- Usage examples
+- Script explanations
+- Requirements and dependencies
+
+Navigate to the specific folder you're interested in and follow the instructions in its README file.
 
 ---
 
-## About the Repository
+## Prerequisites
 
-This repository contains multiple folders for automating and analyzing event registration workflows using Google Apps Script, including:
+- Google Account with access to Google Sheets and Google Drive
+- Basic understanding of Google Apps Script
+- Google Apps Script editor access
 
-- **Complete ticket automation**
-- **Mail sending from registration entries to reminders**
-- **Code for Comparing multiple registrations** (**this folder**)
-- **Few Other Codes**
+---
 
-Each folder includes its own README and scripts for specific automation tasks.
+## Contributing
+
+Feel free to contribute by:
+- Adding new automation scripts
+- Improving existing functionality
+- Fixing bugs or issues
+- Enhancing documentation
 
 ---
 
